@@ -1,0 +1,31 @@
+        ┌────────── MPU6050 ──────────┐
+        │                              │
+        │   VCC  ─────────── 3.3V      │
+        │   GND  ─────────── GND       │
+ESP32   │   SCL  ─────────── GPIO 22   │
+Board   │   SDA  ─────────── GPIO 21   │
+        │                              │
+        └──────────────────────────────┘
+                
+                ┌──── Buttons ────┐
+                │                 │
+                │ Left Button     │ Right Button
+                │                 │
+GPIO 19 ────────┘                 └──────────── GPIO 5
+(each button: other pin to GND, internal pull-up enabled)
+
+
+| Component    | Pin       | Connects To | Notes                 |
+| ------------ | --------- | ----------- | --------------------- |
+| MPU6050      | VCC       | 3.3V        | **Do not use 5V**     |
+| MPU6050      | GND       | GND         | Common ground         |
+| MPU6050      | SCL       | GPIO 22     | I2C Clock             |
+| MPU6050      | SDA       | GPIO 21     | I2C Data              |
+| Left Button  | One pin   | GPIO 19     | Left Click / Drag     |
+| Left Button  | Other pin | GND         | Uses internal pull-up |
+| Right Button | One pin   | GPIO 5      | Right Click           |
+| Right Button | Other pin | GND         | Debounced             |
+
+
+ESP32 USB 5V → onboard regulator → 3.3V supply
+MPU6050 must be powered from 3.3V
