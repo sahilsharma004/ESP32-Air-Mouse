@@ -28,7 +28,7 @@ Libraries Required
 
 Install via Arduino Library Manager:
 
-BleMouse
+BleMouse : https://github.com/T-vK/ESP32-BLE-Mouse
 
 MPU6050_light
 
