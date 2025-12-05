@@ -23,15 +23,7 @@ ESP32 Dev Board	1
 MPU6050 Sensor	1
 Push Buttons	2
 Jumper wires	As required
-Pin Connections
-MPU6050	ESP32
-VCC	3.3V
-GND	GND
-SCL	GPIO 22
-SDA	GPIO 21
-Buttons	ESP32
-Left Click	GPIO 19
-Right Click	GPIO 5
+
 Libraries Required
 
 Install via Arduino Library Manager:
